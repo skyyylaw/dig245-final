@@ -3,15 +3,125 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <title>dig245-final</title>
+	<title>The Court by Sky Luo</title>
+	<!-- Google Font for Oswald -->
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+	<!-- This is the CSS bootstrap link -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<!-- thie is local CSS -->
+	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+	<div class="container-fluid">
+		<div class="row" id="row1">
+			<div class="col-3">
+				<img src="assets/img/Logo.png" alt="logo" id="logo">
+			</div>
+			<div class="col-6">
+				<div class="title-box">
+					<p id="title">The Court</p>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row2">
+			<div class="col-3"></div>
+			<div class="col-6" >
+				<div id="top-baseline">
+					<button type="button" name="button-1" id="button-1">Hit</button>
+					<button type="button" name="button-2" id="button-2">Hit</button>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row3">
+			<div class="col-3"></div>
+			<div class="col-6" >
+				<div id="top-service-zone">
+						<!-- <button type="button" name="button-3" id="button-3">Hit</button> -->
+						<div id="top-service-separation"></div>
+						<!-- <button type="button" name="button-4" id="button-4">Hit</button> -->
+				</div>
 
-    <h1>dig245-final</h1>
+			</div>
+		</div>
+		<div class="row" id="row4">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<div id="net">
+					net
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row5">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<div id="lower-service-zone">
+					<div id="lower-service-separation"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row6">
+			<div id="lower-baseline">
+				<button type="button" name="button-5" id="button-5">Return</button>
+				<button type="button" name="button-6" id="button-6">Return</button>
+			</div>
+		</div>
+		<div class="row" id="row7">
+			<div class="col-3"></div>
+			<div class="col-3">
+				<div id="computer">
+					<p>computer</p>
+				</div>
+			</div>
+			<div class="col-3">
+				<div id="computer-score">
+					<p id="computer-score">0</p>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row8">
+			<div class="col-3"></div>
+			<div class="col-3">
+				<div id="you">
+					<p>You</p>
+				</div>
+			</div>
+			<div class="col-3">
+				<div id="your-score">
+					<p id="your-score">0</p>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row9">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<div id="note-box">
+					<p id="note-title">Notes from Developer</p>
+					<p id="note-content">
+						This webpage tennis game is inspired by the Aaronson Oracle and  based on forecasting with probability.
+						The only difference is that this game will be two-way–both the computer and user will act and guess.
+						<br>
+						Rules: You are playing a twenty-point game with the computer. Whoever reaches a score of 20 first will win.
+						You are always serving the point. Start the point by hitting one of the two directions (click on the "hit" button)
+						to the side of the computer (upper-side). If the computer failed to guess your hitting direction, you win the point.
+						Otherwise, the computer make a random return to you, and you have to return the shot at one of the two positions (click on
+						the return button) on your side of the court (lower-side). If you fail to return, the computer gets the point. Otherwise,
+						the point goes on.
+
+						<br> Mechanism: The computer records the hitting positions the user chooses over time and calculate the probability  of the
+						user’s next move. Meanwhile, since computer can act pseudo-randomly, the past choices of the computer cannot enable
+						the user to predict the computer’s next move. Therefore, the user virtually only relies on luck in predicting the computer’s move.
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
 
 
 

@@ -1,2 +1,199 @@
 
 /* css */
+div.container-fluid{
+  background-color: #487A99;
+  height: 1700px;
+  font-family: 'Oswald';
+}
+
+
+/* row 1 */
+#row1{
+  height: 100px;
+}
+#logo{
+  height: 100px;
+  margin-left: 50%;
+}
+
+.title-box{
+  height: 100px;
+  background-color: #212447;
+
+}
+#title{
+  font-family: 'Oswald';
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+/* row 2 */
+#top-baseline{
+  height: 200px;
+  width: 560px;
+  margin: auto;
+  background-color: #51778D;
+  border-style: solid;
+  border-width: 10px;
+  border-color: white;
+}
+#button-1{
+  margin-left: 80px;
+  margin-top: 80px;
+  width: 100px;
+}
+#button-2{
+  margin-left: 150px;
+  margin-top: 80px;
+  width: 100px;
+}
+
+/* row 3 top service zone */
+
+#top-service-zone{
+  height: 210px;
+  width: 560px;
+  margin: auto;
+  background-color: #51778D;
+  border-style: solid;
+  border-width: 10px;
+  border-color: white;
+}
+
+#top-service-separation{
+  width: 5px;
+  height: 210px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+  margin:auto;
+}
+
+#button-3{
+  width: 100px;
+  margin-top: 80px;
+}
+#button-4{
+  width: 100px;
+  margin-top: 80px;
+}
+
+/* row 4 net */
+#net{
+  margin: auto;
+  height: 20px;
+  width: 560px;
+  background-color: white;
+  text-align: center;
+}
+
+/* row 5 lower service zone */
+#lower-service-zone{
+  height: 210px;
+  width: 560px;
+  margin: auto;
+  background-color: #51778D;
+  border-style: solid;
+  border-width: 10px;
+  border-color: white;
+}
+
+#lower-service-separation{
+  width: 5px;
+  height: 210px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+  margin:auto;
+}
+
+/* row 6 lower baselin */
+#lower-baseline{
+  height: 200px;
+  width: 560px;
+  margin: auto;
+  background-color: #51778D;
+  border-style: solid;
+  border-width: 10px;
+  border-color: white;
+}
+#button-5{
+  margin-left: 80px;
+  margin-top: 80px;
+  width: 100px;
+}
+#button-6{
+  margin-left: 140px;
+  margin-top: 80px;
+  width: 100px;
+}
+
+
+/* row 7 computer score */
+
+#computer{
+  width: 50%;
+  height: 50px;
+  background-color: #58595B;
+  margin-top: 15px;
+  margin-left: 50%;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+#computer-score{
+  width: 50%;
+  height: 50px;
+  background-color: #58595B;
+  margin-top: 15px;
+  margin-right: 50%;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* row 8 your score */
+#you{
+  width: 50%;
+  height: 50px;
+  background-color: black;
+  margin-top: 5px;
+  margin-left: 50%;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+#your-score{
+  width: 50%;
+  height: 50px;
+  background-color: black;
+  margin-top: 5px;
+  margin-right: 50%;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* row 9 note box */
+#note-box{
+  margin-top: 30px;
+  height: 100%;
+  background-color: black;
+  width: 100%;
+}
+#note-title{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+#note-content{
+font-family: "Calibri";
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-weight: normal;
+}
