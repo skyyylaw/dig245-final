@@ -29,6 +29,15 @@ div.container-fluid{
   color: white;
 }
 
+#broadcast{
+  height: 100%;
+  width: 100%;
+  background-color: #2C4C3B;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
 /* row 2 */
 #top-baseline{
   height: 200px;
@@ -49,6 +58,8 @@ div.container-fluid{
   margin-top: 80px;
   width: 100px;
 }
+
+
 
 /* row 3 top service zone */
 

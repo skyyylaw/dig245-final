@@ -4,10 +4,19 @@ var computerGuess = 0;
 var playerScore = 0;
 var computerScore = 0;
 var computerHit = 0;
+var userGuess = 0;
 
 
-document.getElementById("button-1").addEventListener("click", recordHit(1), mainFunction());
-document.getElementById("button-2").addEventListener("click",  recordHit(2), mainFunction());
+document.getElementById("button-1").addEventListener("click", function(){
+  console.log(record, computerGuess, playerScore, computerScore, computerHit)
+  mainFunction(1);
+  console.log(record, computerGuess, playerScore, computerScore, computerHit)
+});
+document.getElementById("button-2").addEventListener("click", function(){
+  console.log(record, computerGuess, playerScore, computerScore, computerHit)
+  mainFunction(2);
+  console.log(record, computerGuess, playerScore, computerScore, computerHit);
+});
 
 function recordHit(buttonNumber){
   record.push(buttonNumber)
@@ -107,8 +116,8 @@ function computerMakeGuess(){
   }
 }
 
-function verifyComputerGuess(){
-  if (record[-1]===computerGuess) {
+function verifyComputerGuess(buttonNumber){
+  if (buttonNumber===computerGuess) {
     return true
   } else{
     return false
@@ -121,26 +130,36 @@ function computerMakeAHit(){
 
 function mainFunction(buttonNumber){
   recordHit(buttonNumber);
-  console.log(record);
   computerMakeGuess();
-  if(record.length != 0 && !verifyComputerGuess()){
-    alert("You won this point!")
+
+  //computer makes a wrong guess, you win the point
+  if(record.length !== 0 && !verifyComputerGuess(buttonNumber)){
+    document.getElementById("broadcast").textContent="You won this point! Hit to start another!"
     playerScore++;
     document.getElementById("your-score").textContent=playerScore;
     return;
-  } else { //computer makes a right guess, points goes on
-    computerMakeAHit();
-    alert("The computer returned your shot! You need to make a return decision!");
   }
+  //computer makes a right guess, points goes on
+  else {
+    computerMakeAHit();
+    document.getElementById("broadcast").textContent="The computer returned your shot! Guess computer's hit!"
+  }
+
   // I need to have the user make an input to continue this funtion
-  var userGuess = 0
-  document.getElementById("button-5").addEventListener("click", userGuess=5);
-  document.getElementById("button-6").addEventListener("click", userGuess=6);
-   // after the user makes a choice
-  if (userguess===computerHit) {
-    alert("You returned computer's hit! Now make another hitting decision!")
-  } else{
+  // after the user makes a choice
+  document.getElementById("button-5").addEventListener("click", function(){
+    userGuess = 5;
+  })
+  document.getElementById("button-6").addEventListener("click", function(){
+    userGuess = 6;
+  })
+  // if user makes a wrong guess
+  if (userguess!==computerHit) {
     computerScore++;
     document.getElementById("computer-score").textContent= computerScore;
+  }
+ // if user makes a correct guess
+  else{
+    document.getElementById("broadcast").textContent="You guessed computer's hit! Now hit!"
   }
 }
