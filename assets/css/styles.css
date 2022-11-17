@@ -34,33 +34,39 @@ div.container-fluid{
 }
 
 /* row 1 score box container */
-#sub-row-1{
+.sub-row-1{
   height: 50px;
-  color: white;
-  text-align: center;
-  font-size: 20px;
 }
 #sub-row-1-computer{
   background-color: gray;
   border: solid 2px white;
-}
-#sub-row-1-computer-score{
-  background-color: black;
-  border: solid 2px white;
-}
-#sub-row-2{
-  height: 50px;
   color: white;
   text-align: center;
   font-size: 20px;
 }
+#sub-row-1-computer-score{
+  background-color: black;
+  border: solid 2px white;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+.sub-row-2{
+  height: 50px;
+}
 #sub-row-2-you{
   background-color: gray;
   border: solid 2px white;
+  color: white;
+  text-align: center;
+  font-size: 20px;
 }
 #sub-row-2-your-score{
   background-color: black;
   border: solid 2px white;
+  color: white;
+  text-align: center;
+  font-size: 20px;
 }
 
 /* row 2 */
@@ -232,4 +238,54 @@ font-family: "Calibri";
   margin-left: 40px;
   margin-right: 40px;
   font-weight: normal;
+}
+
+
+/* below are breakpoints */
+
+
+@media (max-width: 1199.98px) {
+  /* row 1 */
+  #logo{
+    height: 80px;
+  }
+  #title{
+    font-size: 40px;
+  }
+  #broadcast{
+    font-size: 20px;
+  }
+  .sub-row-1{
+    height: 40px;
+  }
+  #sub-row-1-computer{
+    font-size: 15px;
+  }
+  #sub-row-1-computer-score{
+    font-size: 15px;
+  }
+  .sub-row-2{
+    height: 40px;
+  }
+  #sub-row-2-you{
+    font-size: 15px;
+  }
+  #sub-row-2-your-score{
+    font-size: 15px;
+  }
+
+  /* row 2 */
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
