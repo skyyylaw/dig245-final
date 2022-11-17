@@ -8,18 +8,14 @@ div.container-fluid{
 
 
 /* row 1 */
-#row1{
-  height: 100px;
-}
 #logo{
   height: 100px;
   margin-left: 50%;
 }
 
 .title-box{
-  height: 100px;
+  height: 100%;
   background-color: #212447;
-
 }
 #title{
   font-family: 'Oswald';
@@ -27,6 +23,10 @@ div.container-fluid{
   font-size: 50px;
   text-align: center;
   color: white;
+}
+#title-author{
+  color: white;
+  text-align:center;
 }
 
 #broadcast{
