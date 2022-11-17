@@ -145,21 +145,30 @@ function mainFunction(buttonNumber){
     document.getElementById("broadcast").textContent="The computer returned your shot! Guess computer's hit!"
   }
 
-  // I need to have the user make an input to continue this funtion
-  // after the user makes a choice
-  document.getElementById("button-5").addEventListener("click", function(){
-    userGuess = 5;
-  })
-  document.getElementById("button-6").addEventListener("click", function(){
-    userGuess = 6;
-  })
+
+}
+
+document.getElementById("button-5").addEventListener("click", function(){
+  userGuess = 5;
   // if user makes a wrong guess
-  if (userguess!==computerHit) {
+  if (userGuess!==computerHit) {
     computerScore++;
     document.getElementById("computer-score").textContent= computerScore;
   }
- // if user makes a correct guess
+  // if user makes a correct guess
   else{
     document.getElementById("broadcast").textContent="You guessed computer's hit! Now hit!"
   }
-}
+})
+document.getElementById("button-6").addEventListener("click", function(){
+  userGuess = 6;
+  // if user makes a wrong guess
+  if (userGuess!==computerHit) {
+    computerScore++;
+    document.getElementById("computer-score").textContent= computerScore;
+  }
+  // if user makes a correct guess
+  else{
+    document.getElementById("broadcast").textContent="You guessed computer's hit! Now hit!"
+  }
+})
