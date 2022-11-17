@@ -136,7 +136,7 @@ function mainFunction(buttonNumber){
   if(record.length !== 0 && !verifyComputerGuess(buttonNumber)){
     document.getElementById("broadcast").textContent="You won this point! Hit to start another!"
     playerScore++;
-    document.getElementById("your-score").textContent=playerScore;
+    document.getElementById("sub-row-2-your-score").textContent=playerScore;
     return;
   }
   //computer makes a right guess, points goes on
@@ -153,7 +153,7 @@ document.getElementById("button-5").addEventListener("click", function(){
   // if user makes a wrong guess
   if (userGuess!==computerHit) {
     computerScore++;
-    document.getElementById("computer-score").textContent= computerScore;
+    document.getElementById("sub-row-1-computer-score").textContent= computerScore;
   }
   // if user makes a correct guess
   else{

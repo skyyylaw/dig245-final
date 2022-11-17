@@ -15,13 +15,32 @@
 <body>
 	<div class="container-fluid">
 		<div class="row" id="row1">
-			<div class="col-3">
+			<div class="col-1">
 				<img src="assets/img/Logo.png" alt="logo" id="logo">
+			</div>
+			<div class="col-2">
+				<div class="container">
+					<div class="row" id="sub-row-1">
+						<div class="col-6" id="sub-row-1-computer">
+							<p>Computer</p>
+						</div>
+						<div class="col-6" id="sub-row-1-computer-score">
+							<p>0</p>
+						</div>
+					</div>
+					<div class="row" id="sub-row-2">
+						<div class="col-6" id="sub-row-2-you">
+							<p>You</p>
+						</div>
+						<div class="col-6" id="sub-row-2-your-score">
+							<p>0</p>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="col-6">
 				<div class="title-box">
 					<p id="title">The Court</p>
-					<p id="title-author">by Sky Luo</p>
 				</div>
 			</div>
 			<div class="col-3">
@@ -72,7 +91,7 @@
 				<button type="button" name="button-6" id="button-6">Return</button>
 			</div>
 		</div>
-		<div class="row" id="row7">
+		<!-- <div class="row" id="row7">
 			<div class="col-3"></div>
 			<div class="col-3">
 				<div id="computer">
@@ -84,8 +103,8 @@
 					<p id="computer-score">0</p>
 				</div>
 			</div>
-		</div>
-		<div class="row" id="row8">
+		</div> -->
+		<!-- <div class="row" id="row8">
 			<div class="col-3"></div>
 			<div class="col-3">
 				<div id="you">
@@ -97,7 +116,7 @@
 					<p id="your-score">0</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="row" id="row9">
 			<div class="col-3"></div>
 			<div class="col-6">
@@ -115,9 +134,8 @@
 						the return button) on your side of the court (lower-side). If you fail to return, the computer gets the point. Otherwise,
 						the point goes on.
 
-						<br> Mechanism: The computer records the hitting positions the user chooses over time and calculate the probability  of the
-						user’s next move. Meanwhile, since computer can act pseudo-randomly, the past choices of the computer cannot enable
-						the user to predict the computer’s next move. Therefore, the user virtually only relies on luck in predicting the computer’s move.
+						<br> The computer records the hitting positions the user chooses over time and calculate the probability  of the
+						user’s next move based on your past two choices.
 					</p>
 				</div>
 			</div>
