@@ -8,14 +8,12 @@ var userGuess = 0;
 
 
 document.getElementById("button-1").addEventListener("click", function(){
-  console.log(record, computerGuess, playerScore, computerScore, computerHit)
   mainFunction(1);
-  console.log(record, computerGuess, playerScore, computerScore, computerHit)
+  console.log("Your hitting record is: ", record, ". This is computer's guess",  computerGuess)
 });
 document.getElementById("button-2").addEventListener("click", function(){
-  console.log(record, computerGuess, playerScore, computerScore, computerHit)
   mainFunction(2);
-  console.log(record, computerGuess, playerScore, computerScore, computerHit);
+  console.log("Your hitting record is: ", record, ". This is computer's guess: ",  computerGuess)
 });
 
 function recordHit(buttonNumber){
