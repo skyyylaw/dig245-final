@@ -507,6 +507,9 @@ font-family: "Calibri";
    div.display-none{
      display: none;
    }
+
+
+
    #title{
      font-size: 25px;
    }
@@ -528,6 +531,7 @@ font-family: "Calibri";
      font-size: 8px;
    }
 
+
    /* row 2 */
 
    #top-baseline{
@@ -538,11 +542,13 @@ font-family: "Calibri";
      margin-left: 20px;
      margin-top: 20px;
      width: 50px;
+     font-size: 10px;
    }
    #button-2{
      margin-left: 135px;
      margin-top: 20px;
      width: 50px;
+     font-size: 10px;
    }
    /* row 3 top service zone */
 
@@ -584,11 +590,13 @@ font-family: "Calibri";
      margin-left: 20px;
      margin-top: 20px;
      width: 50px;
+     font-size: 10px;
    }
    #button-6{
      margin-left: 135px;
      margin-top: 20px;
      width: 50px;
+     font-size: 10px;
    }
 
    /* row 9 note box */
