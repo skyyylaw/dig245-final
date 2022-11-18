@@ -388,8 +388,6 @@ font-family: "Calibri";
 
 
  }
-
-
 @media (max-width: 767.98px) {
 
     /* row 1 */
@@ -501,23 +499,118 @@ font-family: "Calibri";
       margin-right: 20px;
       font-weight: normal;
     }
-
  }
 
 
+
  @media (max-width: 575.98px) {
+   div.display-none{
+     display: none;
+   }
+   #title{
+     font-size: 25px;
+   }
+   #broadcast{
+     font-size: 12px;
+   }
+
+   #sub-row-1-computer{
+     font-size: 8px;
+   }
+   #sub-row-1-computer-score{
+     font-size: 8px;
+   }
+
+   #sub-row-2-you{
+     font-size: 8px;
+   }
+   #sub-row-2-your-score{
+     font-size: 8px;
+   }
+
+   /* row 2 */
+
+   #top-baseline{
+     height: 100px;
+     width: 300px;
+   }
+   #button-1{
+     margin-left: 20px;
+     margin-top: 20px;
+     width: 50px;
+   }
+   #button-2{
+     margin-left: 135px;
+     margin-top: 20px;
+     width: 50px;
+   }
+   /* row 3 top service zone */
+
+   #top-service-zone{
+     height: 100px;
+     width: 300px;
+   }
+
+   #top-service-separation{
+     width: 5px;
+     height: 100px;
+   }
 
 
+   /* row 4 net */
+   #net{
+     margin: auto;
+     height: 20px;
+     width: 300px;
+   }
 
+   /* row 5 lower service zone */
+   #lower-service-zone{
+     height: 100px;
+     width: 300px;
+   }
 
+   #lower-service-separation{
+     width: 5px;
+     height: 100px;
+   }
 
+   /* row 6 lower baselin */
+   #lower-baseline{
+     height: 100px;
+     width: 300px;
+   }
+   #button-5{
+     margin-left: 20px;
+     margin-top: 20px;
+     width: 50px;
+   }
+   #button-6{
+     margin-left: 135px;
+     margin-top: 20px;
+     width: 50px;
+   }
 
+   /* row 9 note box */
+   #note-box{
+     margin-top: 20px;
+     height: 100%;
+     background-color: black;
+     width: 100%;
+   }
+   #note-title{
+     text-align: center;
+     font-size: 20px;
+     color: white;
+   }
+   #note-content{
+   font-family: "Calibri";
+     color: white;
+     font-size: 15px;
+     text-align: justify;
+     margin-left: 20px;
+     margin-right: 20px;
+     font-weight: normal;
+   }
 
-
-
-
-
-
-
-
-  }
+ }
