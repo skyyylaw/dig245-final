@@ -21,20 +21,23 @@ function recordHit(buttonNumber){
 }
 
 function computerMakeGuess(){
-  if (record.length < 2) {
+  computerGuess = 0
+  if (record.length <= 3) {
     computerGuess = Math.floor(Math.random()*2+1)
+    console.log("record length less than 4");
     return
   }
 
   //the most recent two-letter sequence is 1 2
-  if (record[-3]===1 && record[-2]===2) {
+  if (record.at(-3)===1 && record.at(-2)===2) {
+    console.log("Entered");
     var followedByOne = 0
     var followedByTwo = 0
-    for (let i=0; i < record.length-1; i++){
-      if (record[i]===1 && record[i+1]===2) {
-        if (record[i+2]===1) {
+    for (let i=0; i < record.length-2; i++){
+      if (record.at(i)===1 && record.at(i+1)===2) {
+        if (record.at(i+2)===1) {
           followedByOne++;
-        } else if (record[i+2]===2) {
+        } else if (record.at(i+2)===2) {
           followedByTwo++;
         }
       }
@@ -49,14 +52,15 @@ function computerMakeGuess(){
   }
 
   //the most recent two-letter sequence is 2 1
-  if (record[-3]===2 && record[-2]===1){
+  else if (record.at(-3) ===2 && record.at(-2)===1){
+    console.log("Entered");
     var followedByOne = 0
     var followedByTwo = 0
-    for (let i=0; i < record.length-1; i++){
-      if (record[i]===2 && record[i+1]===1) {
-        if (record[i+2]===1) {
+    for (let i=0; i < record.length-2; i++){
+      if (record.at(i)===2 && record.at(i+1)===1) {
+        if (record.at(i+2)===1) {
           followedByOne++;
-        } else if (record[i+2]===2) {
+        } else if (record.at(i+2)===2) {
           followedByTwo++;
         }
       }
@@ -69,15 +73,17 @@ function computerMakeGuess(){
       computerGuess = Math.floor(Math.random()*2+1)
     }
   }
+
   //the most recent two-letter sequence is 1 1
-  if (record[-3]===1 && record[-2]===1){
+  else if (record.at(-3)===1 && record.at(-2)===1){
+    console.log("Entered");
     var followedByOne = 0
     var followedByTwo = 0
-    for (let i=0; i < record.length-1; i++){
-      if (record[i]===1 && record[i+1]===1) {
-        if (record[i+2]===1) {
+    for (let i=0; i < record.length-2; i++){
+      if (record.at(i)===1 && record.at(i+1)===1) {
+        if (record.at(i+2)===1) {
           followedByOne++;
-        } else if (record[i+2]===2) {
+        } else if (record.at(i+2)===2) {
           followedByTwo++;
         }
       }
@@ -92,14 +98,16 @@ function computerMakeGuess(){
   }
 
   //the most recent two-letter sequence is 2 2
-  if (record[-3]===2 && record[-2]===2){
+
+  else if (record.at(-3)===2 && record.at(-2)===2){
+    console.log("Entered");
     var followedByOne = 0
     var followedByTwo = 0
-    for (let i=0; i < record.length-1; i++){
-      if (record[i]===2 && record[i+1]===2) {
-        if (record[i+2]===1) {
+    for (let i=0; i < record.length-2; i++){
+      if (record.at(i)===2 && record.at(i+1)===2) {
+        if (record.at(i+2)===1) {
           followedByOne++;
-        } else if (record[i+2]===2) {
+        } else if (record.at(i+2)===2) {
           followedByTwo++;
         }
       }
@@ -135,6 +143,9 @@ function mainFunction(buttonNumber){
     document.getElementById("broadcast").textContent="You won this point! Hit to start another!"
     playerScore++;
     document.getElementById("sub-row-2-your-score").textContent=playerScore;
+    if (playerScore===5) {
+      alert("You won!")
+    }
     return;
   }
   //computer makes a right guess, points goes on
@@ -142,8 +153,6 @@ function mainFunction(buttonNumber){
     computerMakeAHit();
     document.getElementById("broadcast").textContent="The computer returned your shot! Guess computer's hit!"
   }
-
-
 }
 
 document.getElementById("button-5").addEventListener("click", function(){
@@ -152,6 +161,10 @@ document.getElementById("button-5").addEventListener("click", function(){
   if (userGuess!==computerHit) {
     computerScore++;
     document.getElementById("sub-row-1-computer-score").textContent= computerScore;
+    document.getElementById("broadcast").textContent="You made an incorrect guess. You lost the point."
+    if(computerScore===5){
+      alert("You lost!")
+    }
   }
   // if user makes a correct guess
   else{
@@ -163,7 +176,11 @@ document.getElementById("button-6").addEventListener("click", function(){
   // if user makes a wrong guess
   if (userGuess!==computerHit) {
     computerScore++;
-    document.getElementById("computer-score").textContent= computerScore;
+    document.getElementById("sub-row-1-computer-score").textContent= computerScore
+    document.getElementById("broadcast").textContent="You made an incorrect guess. You lost the point."
+    if(computerScore===5){
+      alert("You lost!")
+    }
   }
   // if user makes a correct guess
   else{
