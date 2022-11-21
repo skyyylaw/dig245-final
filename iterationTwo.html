@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Court by Sky Luo</title>
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<!-- Google Font for Oswald -->
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+	<!-- This is the CSS bootstrap link -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<!-- thie is local CSS -->
+	<link rel="stylesheet" href="assets/css/iterationTwo.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row" id="row1">
+			<div class="col-3">
+				<img src="assets/img/Logo.png" alt="logo" id="logo">
+			</div>
+			<div class="col-6">
+				<div class="title-box" id="title-box">
+					<p id="title">The Court</p>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="container">
+					<div class="row" class="sub-row-1" id="sub-row-1">
+						<div class="col-6" id="sub-row-1-computer">
+							<p>Computer</p>
+						</div>
+						<div class="col-6" id="sub-row-1-computer-score">
+							<p>0</p>
+						</div>
+					</div>
+					<div class="row" class="sub-row-2" id="sub-row-2">
+						<div class="col-6" id="sub-row-2-you">
+							<p>You</p>
+						</div>
+						<div class="col-6" id="sub-row-2-your-score">
+							<p>0</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row2">
+			<div class="col-12" >
+				<div id="top-baseline">
+					<button type="button" name="button-1" id="button-1">Hit</button>
+					<button type="button" name="button-2" id="button-2">Hit</button>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row3">
+			<div class="col-12" >
+				<div id="top-service-zone">
+						<!-- <button type="button" name="button-3" id="button-3">Hit</button> -->
+						<div id="top-service-separation"></div>
+						<!-- <button type="button" name="button-4" id="button-4">Hit</button> -->
+				</div>
+
+			</div>
+		</div>
+		<div class="row" id="row4">
+			<div class="col-12">
+				<div id="net">
+					net
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row5">
+			<div class="col-12">
+				<div id="lower-service-zone">
+					<div id="lower-service-separation"></div>
+				</div>
+			</div>
+			<div class="col-3"></div>
+		</div>
+		<div class="row" id="row6">
+			<div class="col-12">
+				<div id="lower-baseline">
+					<button type="button" name="button-5" id="button-5">Return</button>
+					<button type="button" name="button-6" id="button-6">Return</button>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row9">
+			<div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+			<div class="col-xxl-8 col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12">
+				<div id="note-box">
+					<p id="note-title">Words from Your Developer</p>
+					<p id="note-content">
+						This webpage tennis game is inspired by the <a href="https://people.ischool.berkeley.edu/~nick/aaronson-oracle/" target="_blank">Aaronson Oracle</a>
+						and  based on forecasting with probability.
+						The only difference is that this game will be two-way–both the computer and user will act and guess.
+						<br>
+						Rules: You are playing a twenty-point game with the computer. Whoever reaches a score of 20 first will win.
+						You are always serving the point. Start the point by hitting one of the two directions (click on the "hit" button)
+						to the side of the computer (upper-side). If the computer failed to guess your hitting direction, you win the point.
+						Otherwise, the computer make a random return to you, and you have to return the shot at one of the two positions (click on
+						the return button) on your side of the court (lower-side). If you fail to return, the computer gets the point. Otherwise,
+						the point goes on.
+
+						<br> The computer records the hitting positions the user chooses over time and calculate the probability  of the
+						user’s next move based on your past two choices.
+						<br> Cheat Sheet: The computer guess your next move by first inspecting your past two choices, and examine
+						 what typically follows the pattern of your past two choices. For instance, if your past two choices are
+						 1 and 2. The computer searches through your record and see if you usually followed the pattern with 1 or 2,
+						  based on which the computer makes a prediction.
+						 Use inspect to open the console. There are some behind-the-scene information that you can use
+						 to defeat the computer (review your past choices and figure out how to deceive the computer)!
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- Boostrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	<!-- Project JS -->
+	<script src="assets/js/iterationTwo.js"></script>
+
+</body>
+</html>
