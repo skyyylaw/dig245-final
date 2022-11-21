@@ -7,10 +7,11 @@ var computerHit = 0;
 var userGuess = 0;
 
 setTimeout(function(){
+  document.getElementById("title-box").style.backgroundColor="Red"
   document.getElementById("title").textContent="Hit!"
+  document.getElementById("title").style.fontSize="25px"
   showHitHideReturn()
-}, 3000)
-
+}, 2000)
 
 document.getElementById("button-1").addEventListener("click", function(){
   mainFunction(1);
@@ -149,6 +150,23 @@ function showReturnHideHit(){
   document.getElementById("button-6").style.display="inline"
 }
 
+function youLost(){
+  document.getElementById("button-1").style.display="none"
+  document.getElementById("button-2").style.display="none"
+  document.getElementById("button-5").style.display="none"
+  document.getElementById("button-6").style.display="none"
+  document.getElementById("title").textContent="You Lost! Refresh to restart."
+}
+
+function youWon(){
+  document.getElementById("button-1").style.display="none"
+  document.getElementById("button-2").style.display="none"
+  document.getElementById("button-5").style.display="none"
+  document.getElementById("button-6").style.display="none"
+  document.getElementById("title").textContent="You Won! Refresh to restart."
+}
+
+
 function mainFunction(buttonNumber){
   recordHit(buttonNumber);
   computerMakeGuess();
@@ -159,7 +177,7 @@ function mainFunction(buttonNumber){
     playerScore++;
     document.getElementById("sub-row-2-your-score").textContent=playerScore;
     if (playerScore===5) {
-      alert("You won!")
+      youWon()
     }
     showHitHideReturn()
     return;
@@ -180,9 +198,12 @@ document.getElementById("button-5").addEventListener("click", function(){
     document.getElementById("sub-row-1-computer-score").textContent= computerScore;
     document.getElementById("title").textContent="You made an incorrect guess. You lost the point."
     if(computerScore===5){
-      alert("You lost!")
+      youLost()
     }
     showHitHideReturn()
+    setTimeout(function(){
+      document.getElementById("title").textContent="Next point. Hit!"
+    }, 1500)
   }
   // if user makes a correct guess
   else{
@@ -199,9 +220,12 @@ document.getElementById("button-6").addEventListener("click", function(){
     document.getElementById("sub-row-1-computer-score").textContent= computerScore
     document.getElementById("title").textContent="You made an incorrect guess. You lost the point."
     if(computerScore===5){
-      alert("You lost!")
+      youLost()
     }
     showHitHideReturn()
+    setTimeout(function(){
+      document.getElementById("title").textContent="Next point. Hit!"
+    }, 1500)
   }
   // if user makes a correct guess
   else{
