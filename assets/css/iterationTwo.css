@@ -81,14 +81,23 @@ div.container-fluid{
   border-color: white;
 }
 #button-1{
-  margin-left: 80px;
-  margin-top: 80px;
-  width: 100px;
+  width: 49.5%;
+  height: 100%;
+  display: inline-block;
+  border-right: dotted 5px white;
 }
 #button-2{
-  margin-left: 150px;
-  margin-top: 80px;
-  width: 100px;
+  width: 49%;
+  height: 100%;
+  display: inline-block;
+  border-left: dotted 5px white;
+}
+
+#button-1-hit-here, #button-2-hit-here{
+  text-align: center;
+  color: #51778D;
+  font-size: 30px;
+  display: none;
 }
 
 
