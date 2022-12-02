@@ -1,5 +1,6 @@
 
 /* css */
+
 div.container-fluid{
   background-color: #487A99;
   height: 2000px;
@@ -10,9 +11,10 @@ div.container-fluid{
 /* row 1 */
 #logo{
   height: 100px;
+  margin-left: 5%;
 }
 
-.title-box{
+#title-box{
   height: 100%;
   background-color: #212447;
 }
@@ -71,8 +73,8 @@ div.container-fluid{
 
 /* row 2 */
 #top-baseline{
-  height: 200px;
-  width: 560px;
+  height: 180px;
+  width: 500px;
   margin: auto;
   background-color: #51778D;
   border-style: solid;
@@ -80,23 +82,28 @@ div.container-fluid{
   border-color: white;
 }
 #button-1{
-  margin-left: 80px;
-  margin-top: 80px;
-  width: 100px;
+  width: 49.5%;
+  height: 100%;
+  display: inline-block;
+  border-right: dotted 5px white;
 }
 #button-2{
-  margin-left: 150px;
-  margin-top: 80px;
-  width: 100px;
+  margin-left: auto;
+  width: 49%;
+  height: 100%;
+  display: inline-block;
+  border-left: dotted 5px white;
 }
+
+
 
 
 
 /* row 3 top service zone */
 
 #top-service-zone{
-  height: 210px;
-  width: 560px;
+  height: 200px;
+  width: 500px;
   margin: auto;
   background-color: #51778D;
   border-style: solid;
@@ -106,7 +113,7 @@ div.container-fluid{
 
 #top-service-separation{
   width: 5px;
-  height: 210px;
+  height: 200px;
   border-style: solid;
   border-width: 5px;
   border-color: white;
@@ -117,15 +124,16 @@ div.container-fluid{
 #net{
   margin: auto;
   height: 20px;
-  width: 560px;
+  width: 500px;
   background-color: white;
   text-align: center;
 }
 
+
 /* row 5 lower service zone */
 #lower-service-zone{
-  height: 210px;
-  width: 560px;
+  height: 200px;
+  width: 500px;
   margin: auto;
   background-color: #51778D;
   border-style: solid;
@@ -135,7 +143,7 @@ div.container-fluid{
 
 #lower-service-separation{
   width: 5px;
-  height: 210px;
+  height: 200px;
   border-style: solid;
   border-width: 5px;
   border-color: white;
@@ -144,23 +152,25 @@ div.container-fluid{
 
 /* row 6 lower baselin */
 #lower-baseline{
-  height: 200px;
-  width: 560px;
+  height: 180px;
+  width: 500px;
   margin: auto;
   background-color: #51778D;
   border-style: solid;
   border-width: 10px;
   border-color: white;
 }
-#button-5{
-  margin-left: 80px;
-  margin-top: 80px;
-  width: 100px;
+#button-3{
+  width: 49.5%;
+  height: 100%;
+  display: inline-block;
+  border-right: dotted 5px white;
 }
-#button-6{
-  margin-left: 140px;
-  margin-top: 80px;
-  width: 100px;
+#button-4{
+  width: 49%;
+  height: 100%;
+  display: inline-block;
+  border-left: dotted 5px white;
 }
 
 
@@ -186,6 +196,13 @@ font-family: "Calibri";
   margin-right: 40px;
   font-weight: normal;
 }
+
+
+
+
+
+
+
 
 
 /* below are breakpoints */
@@ -227,16 +244,8 @@ font-family: "Calibri";
     height: 180px;
     width: 500px;
   }
-  #button-1{
-    margin-left: 70px;
-    margin-top: 80px;
-    width: 100px;
-  }
-  #button-2{
-    margin-left: 130px;
-    margin-top: 80px;
-    width: 100px;
-  }
+
+
   /* row 3 top service zone */
 
   #top-service-zone{
@@ -275,16 +284,7 @@ font-family: "Calibri";
     height: 180px;
     width: 500px;
   }
-  #button-5{
-    margin-left: 70px;
-    margin-top: 80px;
-    width: 100px;
-  }
-  #button-6{
-    margin-left: 130px;
-    margin-top: 80px;
-    width: 100px;
-  }
+
 
 
 }
@@ -321,16 +321,7 @@ font-family: "Calibri";
     height: 130px;
     width: 430px;
   }
-  #button-1{
-    margin-left: 50px;
-    margin-top: 50px;
-    width: 100px;
-  }
-  #button-2{
-    margin-left: 110px;
-    margin-top: 50px;
-    width: 100px;
-  }
+
   /* row 3 top service zone */
 
   #top-service-zone{
@@ -367,26 +358,6 @@ font-family: "Calibri";
     height: 130px;
     width: 430px;
   }
-  #button-5{
-    margin-left: 50px;
-    margin-top: 50px;
-    width: 100px;
-  }
-  #button-6{
-    margin-left: 110px;
-    margin-top: 50px;
-    width: 100px;
-  }
-
-
-
-
-
-
-
-
-
-
  }
 @media (max-width: 767.98px) {
 
@@ -394,6 +365,7 @@ font-family: "Calibri";
     #logo{
       height: 70px;
     }
+
     #title{
       font-size: 35px;
     }
@@ -421,16 +393,7 @@ font-family: "Calibri";
       height: 100px;
       width: 300px;
     }
-    #button-1{
-      margin-left: 20px;
-      margin-top: 20px;
-      width: 50px;
-    }
-    #button-2{
-      margin-left: 135px;
-      margin-top: 20px;
-      width: 50px;
-    }
+
     /* row 3 top service zone */
 
     #top-service-zone{
@@ -467,16 +430,7 @@ font-family: "Calibri";
       height: 100px;
       width: 300px;
     }
-    #button-5{
-      margin-left: 20px;
-      margin-top: 20px;
-      width: 50px;
-    }
-    #button-6{
-      margin-left: 135px;
-      margin-top: 20px;
-      width: 50px;
-    }
+
 
     /* row 9 note box */
     #note-box{
@@ -538,18 +492,7 @@ font-family: "Calibri";
      height: 100px;
      width: 300px;
    }
-   #button-1{
-     margin-left: 20px;
-     margin-top: 20px;
-     width: 50px;
-     font-size: 10px;
-   }
-   #button-2{
-     margin-left: 135px;
-     margin-top: 20px;
-     width: 50px;
-     font-size: 10px;
-   }
+
    /* row 3 top service zone */
 
    #top-service-zone{
@@ -586,18 +529,7 @@ font-family: "Calibri";
      height: 100px;
      width: 300px;
    }
-   #button-5{
-     margin-left: 20px;
-     margin-top: 20px;
-     width: 50px;
-     font-size: 10px;
-   }
-   #button-6{
-     margin-left: 135px;
-     margin-top: 20px;
-     width: 50px;
-     font-size: 10px;
-   }
+
 
    /* row 9 note box */
    #note-box{

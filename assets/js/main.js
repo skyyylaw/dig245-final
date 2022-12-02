@@ -6,20 +6,58 @@ var computerScore = 0;
 var computerHit = 0;
 var userGuess = 0;
 
+// below is hover change color function
+{
+  $("#button-1").hover(function(){
+  $("#button-1").css("background-color", "yellow");
+  },
+  function(){
+  $("#button-1").css("background-color", "green");
+});
+
+$("#button-2").hover(function(){
+  $("#button-2").css("background-color", "yellow");
+  }, function(){
+  $("#button-2").css("background-color", "green");
+});
+
+$("#button-3").hover(function(){
+  $("#button-3").css("background-color", "yellow");
+  }, function(){
+  $("#button-3").css("background-color", "green");
+});
+$("#button-4").hover(function(){
+  $("#button-4").css("background-color", "yellow");
+  }, function(){
+  $("#button-4").css("background-color", "green");
+});
+}
+
+setTimeout(function(){
+  document.getElementById("title-box").style.backgroundColor="black"
+  document.getElementById("title").textContent="Hit to serve!"
+  document.getElementById("title").style.fontSize="30px"
+  $("#button-1").css("background-color", "green");
+  $("#button-2").css("background-color", "green");
+  showHitHideReturn()
+}, 2000)
+
 
 document.getElementById("button-1").addEventListener("click", function(){
   mainFunction(1);
   console.log("Your hitting record is: ", record, ". This is computer's guess",  computerGuess)
 });
+
 document.getElementById("button-2").addEventListener("click", function(){
   mainFunction(2);
   console.log("Your hitting record is: ", record, ". This is computer's guess: ",  computerGuess)
 });
 
+
+
 function recordHit(buttonNumber){
   record.push(buttonNumber)
 }
-
 function computerMakeGuess(){
   computerGuess = 0
   if (record.length <= 3) {
@@ -30,7 +68,6 @@ function computerMakeGuess(){
 
   //the most recent two-letter sequence is 1 2
   if (record.at(-3)===1 && record.at(-2)===2) {
-    console.log("Entered");
     var followedByOne = 0
     var followedByTwo = 0
     for (let i=0; i < record.length-2; i++){
@@ -53,7 +90,6 @@ function computerMakeGuess(){
 
   //the most recent two-letter sequence is 2 1
   else if (record.at(-3) ===2 && record.at(-2)===1){
-    console.log("Entered");
     var followedByOne = 0
     var followedByTwo = 0
     for (let i=0; i < record.length-2; i++){
@@ -76,7 +112,6 @@ function computerMakeGuess(){
 
   //the most recent two-letter sequence is 1 1
   else if (record.at(-3)===1 && record.at(-2)===1){
-    console.log("Entered");
     var followedByOne = 0
     var followedByTwo = 0
     for (let i=0; i < record.length-2; i++){
@@ -100,7 +135,6 @@ function computerMakeGuess(){
   //the most recent two-letter sequence is 2 2
 
   else if (record.at(-3)===2 && record.at(-2)===2){
-    console.log("Entered");
     var followedByOne = 0
     var followedByTwo = 0
     for (let i=0; i < record.length-2; i++){
@@ -121,7 +155,6 @@ function computerMakeGuess(){
     }
   }
 }
-
 function verifyComputerGuess(buttonNumber){
   if (buttonNumber===computerGuess) {
     return true
@@ -129,61 +162,116 @@ function verifyComputerGuess(buttonNumber){
     return false
   }
 }
-
 function computerMakeAHit(){
   computerHit = Math.floor(Math.random()*2+5)
+}
+function youLost(){
+  document.getElementById("button-1").style.display="none"
+  document.getElementById("button-2").style.display="none"
+  document.getElementById("button-3").style.display="none"
+  document.getElementById("button-4").style.display="none"
+  document.getElementById("title").textContent="You Lost! Refresh the page to restart."
+}
+function youWon(){
+  document.getElementById("button-1").style.display="none"
+  document.getElementById("button-2").style.display="none"
+  document.getElementById("button-3").style.display="none"
+  document.getElementById("button-4").style.display="none"
+  document.getElementById("title").textContent="You Won! Refresh to restart."
+}
+function showHitHideReturn(){
+  document.getElementById("button-1").style.display="inline-block"
+  document.getElementById("button-2").style.display="inline-block"
+  $("#button-1").css("background-color", "green");
+  $("#button-2").css("background-color", "green");
+  document.getElementById("button-3").style.display="none"
+  document.getElementById("button-4").style.display="none"
+}
+function showReturnHideHit(){
+  document.getElementById("button-1").style.display="none"
+  document.getElementById("button-2").style.display="none"
+  document.getElementById("button-3").style.display="inline-block"
+  document.getElementById("button-4").style.display="inline-block"
+  $("#button-3").css("background-color", "green");
+  $("#button-4").css("background-color", "green");
 }
 
 function mainFunction(buttonNumber){
   recordHit(buttonNumber);
   computerMakeGuess();
 
+
   //computer makes a wrong guess, you win the point
   if(record.length !== 0 && !verifyComputerGuess(buttonNumber)){
-    document.getElementById("broadcast").textContent="You won this point! Hit to start another!"
+    document.getElementById("title").textContent="You won this point! Hit to start another!"
     playerScore++;
     document.getElementById("sub-row-2-your-score").textContent=playerScore;
-    if (playerScore===5) {
-      alert("You won!")
+    if (playerScore===20) {
+      youWon()
     }
+    showHitHideReturn()
     return;
+  } else { //computer makes a right guess, points goes on
+    showReturnHideHit()
+    computerMakeAHit()
+    document.getElementById("title").textContent="The computer returned! Guess where it hits!"
   }
-  //computer makes a right guess, points goes on
-  else {
-    computerMakeAHit();
-    document.getElementById("broadcast").textContent="The computer returned your shot! Guess computer's hit!"
-  }
+
 }
 
-document.getElementById("button-5").addEventListener("click", function(){
+
+document.getElementById("button-3").addEventListener("click", function(){
   userGuess = 5;
+
   // if user makes a wrong guess
   if (userGuess!==computerHit) {
     computerScore++;
     document.getElementById("sub-row-1-computer-score").textContent= computerScore;
-    document.getElementById("broadcast").textContent="You made an incorrect guess. You lost the point."
-    if(computerScore===5){
-      alert("You lost!")
+    document.getElementById("title").textContent="You made an incorrect guess. You lost the point."
+    $("#button-3").css("background-color", "red");
+    $("#button-4").css("background-color", "red");
+    if(computerScore===20){
+      youLost()
     }
+    setTimeout(function(){
+      document.getElementById("title").textContent="Next point. Hit to serve!"
+      showHitHideReturn()
+    }, 1500)
   }
+
+
   // if user makes a correct guess
   else{
-    document.getElementById("broadcast").textContent="You guessed computer's hit! Now hit!"
+    showHitHideReturn()
+    document.getElementById("title").textContent="You sucessfully returned! Now hit!"
   }
 })
-document.getElementById("button-6").addEventListener("click", function(){
+document.getElementById("button-4").addEventListener("click", function(){
   userGuess = 6;
+
+
+
   // if user makes a wrong guess
   if (userGuess!==computerHit) {
     computerScore++;
     document.getElementById("sub-row-1-computer-score").textContent= computerScore
-    document.getElementById("broadcast").textContent="You made an incorrect guess. You lost the point."
-    if(computerScore===5){
-      alert("You lost!")
+    document.getElementById("title").textContent="You made an incorrect guess. You lost the point."
+    $("#button-3").css("background-color", "red");
+    $("#button-4").css("background-color", "red");
+    if(computerScore===20){
+      youLost()
     }
+    setTimeout(function(){
+      document.getElementById("title").textContent="Next point. Hit to serve!"
+      showHitHideReturn()
+    }, 1500)
   }
+
+
+
   // if user makes a correct guess
   else{
-    document.getElementById("broadcast").textContent="You guessed computer's hit! Now hit!"
+    document.getElementById("title").textContent="You guessed computer's hit! Now hit!"
+    showHitHideReturn()
   }
 })
