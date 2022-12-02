@@ -10,21 +10,16 @@
 	<!-- This is the CSS bootstrap link -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	<!-- thie is local CSS -->
-	<link rel="stylesheet" href="assets/css/iterationOne.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 	<div class="container-fluid">
 		<div class="row" id="row1">
-			<div class="col-3">
+			<div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 display-none">
 				<img src="assets/img/Logo.png" alt="logo" id="logo">
 			</div>
-			<div class="col-6">
-				<div class="title-box" id="title-box">
-					<p id="title">The Court</p>
-				</div>
-			</div>
-			<div class="col-3">
+			<div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-sm-3 col-4">
 				<div class="container">
 					<div class="row" class="sub-row-1" id="sub-row-1">
 						<div class="col-6" id="sub-row-1-computer">
@@ -42,6 +37,16 @@
 							<p>0</p>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="col-xxl-6 col-xl-6 col-lg-4 col-md-4 col-sm-4 col-4">
+				<div class="title-box">
+					<p id="title">The Court</p>
+				</div>
+			</div>
+			<div class="col-xl-3 col-xl-3 col-lg-4 col-md-4 col-sm-4 col-4">
+				<div id="broadcast">
+					<p>Read your instruction here</p>
 				</div>
 			</div>
 		</div>
@@ -105,12 +110,6 @@
 
 						<br> The computer records the hitting positions the user chooses over time and calculate the probability  of the
 						user’s next move based on your past two choices.
-						<br> Cheat Sheet: The computer guess your next move by first inspecting your past two choices, and examine
-						 what typically follows the pattern of your past two choices. For instance, if your past two choices are
-						 1 and 2. The computer searches through your record and see if you usually followed the pattern with 1 or 2,
-						  based on which the computer makes a prediction.
-						 Use inspect to open the console. There are some behind-the-scene information that you can use
-						 to defeat the computer (review your past choices and figure out how to deceive the computer)!
 					</p>
 				</div>
 			</div>
@@ -123,7 +122,7 @@
 	<!-- Boostrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 	<!-- Project JS -->
-	<script src="assets/js/iterationOne.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
 </html>
