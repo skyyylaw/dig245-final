@@ -36,7 +36,7 @@ $("#button-4").hover(function(){
 setTimeout(function(){
   document.getElementById("title-box").style.backgroundColor="black"
   document.getElementById("title").textContent="Hit to serve!"
-  document.getElementById("title").style.fontSize="30px"
+  document.getElementById("title").style.fontSize="25px"
   $("#button-1").css("background-color", "green");
   $("#button-2").css("background-color", "green");
   showHitHideReturn()
