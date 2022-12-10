@@ -5,7 +5,7 @@ var playerScore = 0;
 var computerScore = 0;
 var computerHit = 0;
 var userGuess = 0;
-
+const audio = new Audio("Hit-sound.m4a")
 // below is hover change color function
 {
   $("#button-1").hover(function(){
@@ -45,11 +45,13 @@ setTimeout(function(){
 
 document.getElementById("button-1").addEventListener("click", function(){
   mainFunction(1);
+  audio.play();
   console.log("Your hitting record is: ", record, ". This is computer's guess",  computerGuess)
 });
 
 document.getElementById("button-2").addEventListener("click", function(){
   mainFunction(2);
+  audio.play();
   console.log("Your hitting record is: ", record, ". This is computer's guess: ",  computerGuess)
 });
 
@@ -242,13 +244,13 @@ document.getElementById("button-3").addEventListener("click", function(){
 
   // if user makes a correct guess
   else{
+    audio.play();
     showHitHideReturn()
     document.getElementById("title").textContent="You sucessfully returned! Now hit!"
   }
 })
 document.getElementById("button-4").addEventListener("click", function(){
   userGuess = 6;
-
 
 
   // if user makes a wrong guess
@@ -271,6 +273,7 @@ document.getElementById("button-4").addEventListener("click", function(){
 
   // if user makes a correct guess
   else{
+    audio.play();
     document.getElementById("title").textContent="You guessed computer's hit! Now hit!"
     showHitHideReturn()
   }
